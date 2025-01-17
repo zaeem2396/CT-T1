@@ -51,7 +51,7 @@ class ProductController extends Controller
             'index' => 'required|integer',
             'prodName' => 'required|string',
             'qtyInStock' => 'required|integer|min:0',
-            'pricePerItem' => 'required|numberic|min:0'
+            'pricePerItem' => 'required|numeric|min:0'
         ]);
 
         $products = $this->getProducts();

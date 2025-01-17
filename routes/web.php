@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  [ProductController::class, 'index']);
 Route::post('/submit', [ProductController::class, 'storeProduct']);
-Route::post('/edit', [ProductController::class, 'editProduct']);
+Route::put('/edit', [ProductController::class, 'editProduct']);
