@@ -74,10 +74,9 @@
     </div>
 
     <script>
-        let products = <?= json_encode($products) ?> // Load products from the server
-        let editingIndex = null; // Track editing state
+        let products = <?= json_encode($products) ?>
+        let editingIndex = null;
 
-        // Handle form submission for both add and edit
         function submitProduct(e) {
             e.preventDefault();
 
@@ -121,7 +120,6 @@
             });
         }
 
-        // Handle edit button click
         $(document).on('click', '.edit-btn', function() {
             const index = $(this).data('index');
             const product = products[index];
@@ -136,7 +134,6 @@
             $('button[type="button"]').text('Update');
         });
 
-        // Update the product table dynamically
         function updateTable(products) {
             let tableBody = '';
             let sumTotal = 0;
